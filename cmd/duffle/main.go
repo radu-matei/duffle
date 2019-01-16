@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"log"
 	"os"
 	"path/filepath"
 	"runtime"
@@ -106,7 +107,7 @@ func isPathy(name string) bool {
 
 func must(err error) {
 	if err != nil {
-		os.Exit(1)
+		log.Fatalf("Error: %v", err)
 	}
 }
 
