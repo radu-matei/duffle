@@ -116,7 +116,11 @@ type Action struct {
 	// Modifies indicates whether this action modifies the release.
 	//
 	// If it is possible that an action modify a release, this must be set to true.
-	Modifies bool
+	Modifies bool `json:"modifies" mapstructure:"modifies"`
+	// Description is a human readable description of the action
+	Description string `json:"description" mapstructure:"description"`
+	// Stateless indicates that this action does not act on claim, and does not require credentials
+	Stateless bool `json:"stateless" mapstructure:"stateless"`
 }
 
 // ValuesOrDefaults returns parameter values or the default parameter values

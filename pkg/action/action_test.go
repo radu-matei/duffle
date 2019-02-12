@@ -69,7 +69,11 @@ func mockBundle() *bundle.Bundle {
 			},
 		},
 		Actions: map[string]bundle.Action{
-			"test": {Modifies: true},
+			"test": {
+				Modifies:    true,
+				Description: "this is a mock action",
+				Stateless:   true,
+			},
 		},
 		Images: map[string]bundle.Image{
 			"image-a": {
