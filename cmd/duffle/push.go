@@ -56,5 +56,10 @@ $ duffle push path-to-bundle.json --bundle-is-file registtry/username/bundle:tag
 }
 
 func (p *pushCmd) run() error {
-	return coras.Push(p.inputBundle, p.targetRef, false)
+	bundleFile, err := resolveBundleFilePath(p.inputBundle, p.home.String(), p.bundleIsFile)
+	if err != nil {
+		return err
+	}
+
+	return coras.Push(bundleFile, p.targetRef, false)
 }
