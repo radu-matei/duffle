@@ -27,9 +27,6 @@ The first argument is the bundle to push (or the path to the bundle file, if the
 --bundle-is-file flag is passed), and the second argument is the target repository
 where the bundle and all referenced images will be pushed.
 
-Insecure registries can be passed through the --insecure-registries flags,
-and --allow-fallbacks enables automatic compatibility fallbacks for registries
-without support for custom media type, or OCI manifests.
 
 Examples:
 $ duffle push bundle-reference registry/usernamne/bundle:tag

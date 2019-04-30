@@ -31,8 +31,6 @@ bundle and stores it in the local bundle store.
 If the --output flag is passed, the bundle file will be saved in
 that file, and its reference will not be recorded in the local store.
 
-Insecure registries can be passed through the --insecure-registries flags.
-
 Examples:
 $ duffle pull registry/username/bundle:tag
 $ duffle pull --output path-for-bundle.json registry/username/bundle:tag
