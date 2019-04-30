@@ -1,17 +1,15 @@
 package main
 
 import (
-	"context"
 	"fmt"
 	"io"
 	"io/ioutil"
 	"path/filepath"
 
 	"github.com/deislabs/duffle/pkg/duffle/home"
-	"github.com/deislabs/duffle/pkg/reference"
+	"github.com/radu-matei/coras/pkg/coras"
 
 	"github.com/deislabs/cnab-go/bundle"
-	"github.com/docker/cnab-to-oci/remotes"
 	"github.com/spf13/cobra"
 )
 
@@ -53,18 +51,13 @@ $ duffle pull --output path-for-bundle.json registry/username/bundle:tag
 	}
 
 	cmd.Flags().StringVarP(&pull.output, "output", "o", "", "Output file")
-	cmd.Flags().StringSliceVar(&pull.insecureRegistries, "insecure-registries", nil, "Use plain HTTP for those registries")
 	return cmd
 }
 
 func (p *pullCmd) run() error {
-	ref, err := reference.ParseNormalizedNamed(p.targetRef)
+	b, err := coras.PullBundle(p.targetRef)
 	if err != nil {
-		return err
-	}
-	b, err := remotes.Pull(context.Background(), ref, createResolver(p.insecureRegistries).Resolver)
-	if err != nil {
-		return err
+		return fmt.Errorf("cannot pull bundle from %s: %v", p.targetRef, err)
 	}
 
 	return p.writeBundle(b)

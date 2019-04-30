@@ -67,11 +67,14 @@
   name = "github.com/deislabs/cnab-go"
   branch = "master"
 
+#[[override]]
+#  name = "github.com/containerd/containerd"
+#  source = "github.com/simonferquel/containerd"
+#  revision = "42c3614d58767e96c1752977fed94d0b140a0173"
+
 [[override]]
   name = "github.com/containerd/containerd"
-  source = "github.com/simonferquel/containerd"
-  revision = "42c3614d58767e96c1752977fed94d0b140a0173"
-
+  version = "=v1.2.6"
 
 [[override]]
   name = "golang.org/x/sys"
@@ -100,3 +103,7 @@
 [[override]]
   name = "github.com/docker/compose-on-kubernetes"
   revision = "a6086e2369e39c2058a003a7eb42e567ecfd1f03"
+
+[[constraint]]
+  name = "github.com/radu-matei/coras"
+  branch = "pull-bundle"

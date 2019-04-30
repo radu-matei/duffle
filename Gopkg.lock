@@ -80,7 +80,7 @@
   version = "v1.0.0"
 
 [[projects]]
-  digest = "1:7b09e241728ee947f7a7ff9069c292693e076063657b23f9c00bf290c25ed1a8"
+  digest = "1:147e098575033296d8b098acf12755be64a0fe15416f9ddb3c9795ae2918d7c0"
   name = "github.com/containerd/containerd"
   packages = [
     ".",
@@ -112,8 +112,6 @@
     "identifiers",
     "images",
     "images/archive",
-    "images/oci",
-    "labels",
     "leases",
     "leases/proxy",
     "log",
@@ -129,19 +127,17 @@
     "remotes/docker/schema1",
     "rootfs",
     "runtime/linux/runctypes",
-    "runtime/v2/runc/options",
     "snapshots",
     "snapshots/proxy",
     "sys",
-    "version",
   ]
   pruneopts = "NUT"
-  revision = "42c3614d58767e96c1752977fed94d0b140a0173"
-  source = "github.com/simonferquel/containerd"
+  revision = "894b81a4b802e4eb2a91d1ce216b8817763c29fb"
+  version = "v1.2.6"
 
 [[projects]]
   branch = "master"
-  digest = "1:eed35b29da8f6a4f75df1e156e053e969f546f3e625a6c26753839a93def2298"
+  digest = "1:835fc727705e8cf858ea44ad9bd872ff826d1c6b019598e0f9a64c9b942a947b"
   name = "github.com/containerd/continuity"
   packages = [
     "fs",
@@ -150,7 +146,7 @@
     "sysx",
   ]
   pruneopts = "NUT"
-  revision = "004b46473808b3e7a4a3049c20e4376c91eb966d"
+  revision = "aaeac12a7ffcd198ae25440a9dff125c2e2703a7"
 
 [[projects]]
   branch = "master"
@@ -185,6 +181,19 @@
   revision = "7cd944a8ee450ee465795d21ad7302bed34ad1b0"
 
 [[projects]]
+  branch = "master"
+  digest = "1:82158435e282da9b23bb1188487fe1c68b17a54ed9dcd557ab6204782ad3ff92"
+  name = "github.com/deislabs/oras"
+  packages = [
+    "pkg/auth",
+    "pkg/auth/docker",
+    "pkg/content",
+    "pkg/oras",
+  ]
+  pruneopts = "NUT"
+  revision = "9f7669048990b0d0c186985737e6a6c3bb3f7ecc"
+
+[[projects]]
   digest = "1:e71d64468873ca819b91b975e67e71f349a89f41ab38040bcbd8840f5e193654"
   name = "github.com/docker/cli"
   packages = [
@@ -215,17 +224,6 @@
   ]
   pruneopts = "NUT"
   revision = "f95ca8e1ba6c22c9abcdbf65e8dcc39c53958bba"
-
-[[projects]]
-  branch = "master"
-  digest = "1:dceb82de160ec21c5e3a22d48db99932f82f40c74bd7cad8bc23b7455613836b"
-  name = "github.com/docker/cnab-to-oci"
-  packages = [
-    "converter",
-    "remotes",
-  ]
-  pruneopts = "NUT"
-  revision = "b5151460464190c13291d36d383cd0ef3e59a852"
 
 [[projects]]
   digest = "1:a828cce5747a0ac32a41fd9644660a815cbc3c61caa85c03b0a651d62320aa0b"
@@ -360,12 +358,12 @@
   revision = "db152003892af64a8a892e1ee49edf8b6580a657"
 
 [[projects]]
-  digest = "1:4340101f42556a9cb2f7a360a0e95a019bfef6247d92e6c4c46f2433cf86a482"
+  digest = "1:97176fe8a268479a527d08df458c269dc27abf59c1643807d4e36398cbd9ef2d"
   name = "github.com/docker/go-units"
   packages = ["."]
   pruneopts = "NUT"
-  revision = "47565b4f722fb6ceae66b95f853feed578a4a51c"
-  version = "v0.3.3"
+  revision = "519db1ee28dcc9fd2474ae59fca29a810482bfb1"
+  version = "v0.4.0"
 
 [[projects]]
   digest = "1:1b91ae0dc69a41d4c2ed23ea5cffb721ea63f5037ca4b81e6d6771fbb8f45129"
@@ -435,7 +433,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:ff55753953bed2b3fd063aa7cd442de2a855c257d33ba0bf63f69178b5b5758e"
+  digest = "1:86a6deb2714dd192699af9536e8bc807fa0b592fedce32c88fa64129264fb3a1"
   name = "github.com/google/go-containerregistry"
   packages = [
     "pkg/authn",
@@ -451,7 +449,7 @@
     "pkg/v1/v1util",
   ]
   pruneopts = "NUT"
-  revision = "1d38b9cfdb9d294aca666bf0c1c0bcade771e8c9"
+  revision = "b6d875c30fe7d51e952909e585882149f6fedf74"
 
 [[projects]]
   digest = "1:52c5834e2bebac9030c97cc0798ac11c3aa8a39f098aeb419f142533da6cd3cc"
@@ -505,12 +503,12 @@
   revision = "3befbb6ad0cc97d4c25d851e9528915809e1a22f"
 
 [[projects]]
-  digest = "1:c7d9de42b661ba85788f5f631cbac165795a2ff7dc1c59a4241d6228b129c3e4"
+  digest = "1:53a4ebb0e1eb24a4644a3eec9457ba6ead5476a9ea5af43bf2c8b8b1a8ce47f2"
   name = "github.com/hashicorp/go-version"
   packages = ["."]
   pruneopts = "NUT"
-  revision = "d40cf49b3a77bba84a7afdbd7f1dc295d114efb1"
-  version = "v1.1.0"
+  revision = "ac23dc3fea5d1a983c43f6a0f6e2c13f0195d8bd"
+  version = "v1.2.0"
 
 [[projects]]
   digest = "1:11c6c696067d3127ecf332b10f89394d386d9083f82baf71f40f2da31841a009"
@@ -620,12 +618,12 @@
   revision = "9520e82c474b0a04dd04f8a40959027271bab992"
 
 [[projects]]
-  branch = "master"
-  digest = "1:e35b4854067841ee57ba87cb9a31455553421f77e2125d2cbb1c01509f532cc9"
+  digest = "1:8173712f82b2da5dd36cdcbaa658f57fa8509634e5ecccbcfb948ecee051b0de"
   name = "github.com/miekg/pkcs11"
   packages = ["."]
   pruneopts = "NUT"
-  revision = "553cfdd26aaafe851ca66a5e8015f0decb6b5a1e"
+  revision = "cb39313ec884f2cd77f4762875fe96aecf68f8e3"
+  version = "v1.0.2"
 
 [[projects]]
   digest = "1:a45ae66dea4c899d79fceb116accfa1892105c251f0dcd9a217ddc276b42ec68"
@@ -715,16 +713,16 @@
   revision = "53be0d36a84c2a886ca057d34b6aa4468df9ccb4"
 
 [[projects]]
-  digest = "1:6c6d91dc326ed6778783cff869c49fb2f61303cdd2ebbcf90abe53505793f3b6"
+  digest = "1:e1b94bd98c62fc2f905621fc6ba8209b7004e4513a1dfecb12a3de56ec2bb519"
   name = "github.com/peterbourgon/diskv"
   packages = ["."]
   pruneopts = "NUT"
-  revision = "5f041e8faa004a95c88a202771f4cc3e991971e6"
-  version = "v2.0.1"
+  revision = "0be1b92a6df0e4f5cb0a5d15fb7f643d0ad93ce6"
+  version = "v3.0.0"
 
 [[projects]]
   branch = "master"
-  digest = "1:f47d5892e50c2937477813f188fba877953faa98e2846497f842211ae3b52670"
+  digest = "1:51fe4ab7998675070e586dfbd2d981ada4932e0bb9a920cb5d993816d1f734c1"
   name = "github.com/pivotal/image-relocation"
   packages = [
     "pkg/image",
@@ -732,7 +730,7 @@
     "pkg/registry",
   ]
   pruneopts = "NUT"
-  revision = "532dd0b42e7a50010d7868364309cd314a2bb376"
+  revision = "32c0ad007a7fdec3d8ed89803e55b839320adb0d"
 
 [[projects]]
   digest = "1:14715f705ff5dfe0ffd6571d7d201dd8e921030f8070321a79380d8ca4ec1a24"
@@ -787,7 +785,15 @@
   name = "github.com/prometheus/procfs"
   packages = ["."]
   pruneopts = "NUT"
-  revision = "8368d24ba045f26503eb745b624d930cbe214c79"
+  revision = "87a4384529e0652f5035fb5cc8095faf73ea9b0b"
+
+[[projects]]
+  branch = "pull-bundle"
+  digest = "1:652448581932470e46a051569d91dc4b13324d123a2aca5d89cf7e8339670382"
+  name = "github.com/radu-matei/coras"
+  packages = ["pkg/coras"]
+  pruneopts = "NUT"
+  revision = "6050d2538a3aa8159c9a862396e7a7745e2549bd"
 
 [[projects]]
   digest = "1:998e4640c25e00ccb7b2569bf94562283937b8afb3485c0e1a0a05a15330240d"
@@ -904,11 +910,11 @@
     "ssh/terminal",
   ]
   pruneopts = "NUT"
-  revision = "df01cb2cc480549d72034218dd98bf97671450ac"
+  revision = "a29dc8fdc73485234dbef99ebedb95d2eced08de"
 
 [[projects]]
   branch = "master"
-  digest = "1:084c95e30e968f3d7325762ced9bcb644a22d88957006df5de40c13a2356f1c4"
+  digest = "1:67ff6534e0d6ca29f11efa86c1b300903565d67a7f18197731930f3552854b63"
   name = "golang.org/x/net"
   packages = [
     "context",
@@ -923,18 +929,15 @@
     "trace",
   ]
   pruneopts = "NUT"
-  revision = "1da14a5a36f220ea3f03470682b737b1dfd5de22"
+  revision = "4829fb13d2c62012c17688fa7f629f371014946d"
 
 [[projects]]
   branch = "master"
-  digest = "1:04a5b0e4138f98eef79ce12a955a420ee358e9f787044cc3a553ac3c3ade997e"
+  digest = "1:b521f10a2d8fa85c04a8ef4e62f2d1e14d303599a55d64dabf9f5a02f84d35eb"
   name = "golang.org/x/sync"
-  packages = [
-    "errgroup",
-    "semaphore",
-  ]
+  packages = ["errgroup"]
   pruneopts = "NUT"
-  revision = "56d357773e8497dfd526f0727e187720d1093757"
+  revision = "112230192c580c3556b8cee6403af37a4fc5f28c"
 
 [[projects]]
   digest = "1:0584f6fe1220fd370706fc125a81c594edb2f315af47722cc786dfce4a4dc6e6"
@@ -947,13 +950,15 @@
   revision = "f49334f85ddcf0f08d7fb6dd7363e9e6d6b777eb"
 
 [[projects]]
-  digest = "1:e7071ed636b5422cc51c0e3a6cebc229d6c9fffc528814b519a980641422d619"
+  digest = "1:8d8faad6b12a3a4c819a3f9618cb6ee1fa1cfc33253abeeea8b55336721e3405"
   name = "golang.org/x/text"
   packages = [
     "collate",
     "collate/build",
     "internal/colltab",
     "internal/gen",
+    "internal/language",
+    "internal/language/compact",
     "internal/tag",
     "internal/triegen",
     "internal/ucd",
@@ -966,8 +971,8 @@
     "unicode/rangetable",
   ]
   pruneopts = "NUT"
-  revision = "f21a4dfb5e38f5895301dc265a8def02365cc3d0"
-  version = "v0.3.0"
+  revision = "342b2e1fbaa52c93f31447ad2c6abc048c63e475"
+  version = "v0.3.2"
 
 [[projects]]
   branch = "master"
@@ -983,10 +988,10 @@
   name = "google.golang.org/genproto"
   packages = ["googleapis/rpc/status"]
   pruneopts = "NUT"
-  revision = "e7d98fc518a78c9f8b5ee77be7b0b317475d89e1"
+  revision = "357c62f0e4bbba7e6cc403ae09edcf3e2b9028fe"
 
 [[projects]]
-  digest = "1:2c81be55b52bfd8479b143a947f919055da25c3460f3a2c17819834af238050f"
+  digest = "1:0e2881968b34ee22486956afa001626d375164a627806903e232595c0ba40736"
   name = "google.golang.org/grpc"
   packages = [
     ".",
@@ -1024,11 +1029,11 @@
     "tap",
   ]
   pruneopts = "NUT"
-  revision = "236199dd5f8031d698fb64091194aecd1c3895b2"
-  version = "v1.20.0"
+  revision = "25c4f928eaa6d96443009bd842389fb4fa48664e"
+  version = "v1.20.1"
 
 [[projects]]
-  digest = "1:acce65b46e283672291c073e642b3cadbb2817d4689a2f8babc5bad08724c99c"
+  digest = "1:772582519e69209fd93a3da1d99e8b3e21e8f96d89c2cef54a90f8a2f7947bc4"
   name = "gopkg.in/AlecAivazis/survey.v1"
   packages = [
     ".",
@@ -1036,8 +1041,8 @@
     "terminal",
   ]
   pruneopts = "NUT"
-  revision = "ee72c28b95a5ff3e227cfd403f556f0ef4b07ca5"
-  version = "v1.8.2"
+  revision = "a84846dc69f1fbe032f4534f92e937684b9a3710"
+  version = "v1.8.3"
 
 [[projects]]
   digest = "1:2d1fbdc6777e5408cabeb02bf336305e724b925ff4546ded0fa8715a7267922a"
@@ -1215,7 +1220,6 @@
     "github.com/docker/cli/cli/debug",
     "github.com/docker/cli/cli/flags",
     "github.com/docker/cli/opts",
-    "github.com/docker/cnab-to-oci/remotes",
     "github.com/docker/distribution/digestset",
     "github.com/docker/distribution/reference",
     "github.com/docker/docker/api/types",
@@ -1239,6 +1243,7 @@
     "github.com/pivotal/image-relocation/pkg/pathmapping",
     "github.com/pivotal/image-relocation/pkg/registry",
     "github.com/pkg/errors",
+    "github.com/radu-matei/coras/pkg/coras",
     "github.com/sirupsen/logrus",
     "github.com/spf13/cobra",
     "github.com/spf13/pflag",
